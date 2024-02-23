@@ -1,0 +1,155 @@
+{
+  "name": "nano-id-gen",
+  "displayName": "Nano-ID-Generator",
+  "description": "Generate various Nano IDs via keyboard shortcuts.",
+  "version": "1.0.0",
+  "author": "Neckar IT",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "nano",
+    "id",
+    "nanoid",
+    "generator",
+    "unique",
+    "random",
+    "string",
+    "shortcut"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "keybindings": [
+      {
+        "command": "gen.nano.id.sm",
+        "key": "shift+alt+u 1",
+        "mac": "shift+option+u 1",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "gen.nano.id.md",
+        "key": "shift+alt+u 2",
+        "mac": "shift+option+u 2",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "gen.nano.id.lg",
+        "key": "shift+alt+u 3",
+        "mac": "shift+option+u 3",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "gen.nano.id.sm.term",
+        "key": "shift+alt+u 1",
+        "mac": "shift+option+u 1",
+        "when": "terminalFocus"
+      },
+      {
+        "command": "gen.nano.id.md.term",
+        "key": "shift+alt+u 2",
+        "mac": "shift+option+u 2",
+        "when": "terminalFocus"
+      },
+      {
+        "command": "gen.nano.id.lg.term",
+        "key": "shift+alt+u 3",
+        "mac": "shift+option+u 3",
+        "when": "terminalFocus"
+      }
+    ],
+    "commands": [
+      {
+        "command": "gen.nano.id.sm",
+        "title": "Generate small Nano ID for editor"
+      },
+      {
+        "command": "gen.nano.id.md",
+        "title": "Generate medium Nano ID for editor"
+      },
+      {
+        "command": "gen.nano.id.lg",
+        "title": "Generate large Nano ID for editor"
+      },
+      {
+        "command": "gen.nano.id.sm.term",
+        "title": "Generate small Nano ID for terminal"
+      },
+      {
+        "command": "gen.nano.id.md.term",
+        "title": "Generate medium Nano ID for terminal"
+      },
+      {
+        "command": "gen.nano.id.lg.term",
+        "title": "Generate large Nano ID for terminal"
+      }
+    ],
+    "configuration": {
+      "title": "nano-id-gen configuration",
+      "type": "object",
+      "properties": {
+        "nano-id-gen.lg-size": {
+          "type": "integer",
+          "minimum": 2,
+          "default": 36,
+          "maximum": 36,
+          "description": "The length of the generated large Nano ID (shift+alt+u 3)"
+        },
+        "nano-id-gen.lg-seed": {
+          "type": "string",
+          "default": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          "description": "The seed for the generated large Nano ID (shift+alt+u 3)"
+        },
+        "nano-id-gen.md-size": {
+          "type": "integer",
+          "minimum": 2,
+          "default": 21,
+          "maximum": 36,
+          "description": "The length of the generated medium Nano ID (shift+alt+u 2)"
+        },
+        "nano-id-gen.md-seed": {
+          "type": "string",
+          "default": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          "description": "The seed for the generated medium Nano ID (shift+alt+u 2)"
+        },
+        "nano-id-gen.sm-size": {
+          "type": "integer",
+          "minimum": 2,
+          "default": 12,
+          "maximum": 36,
+          "description": "The length of the generated small Nano ID (shift+alt+u 1)"
+        },
+        "nano-id-gen.sm-seed": {
+          "type": "string",
+          "default": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          "description": "The seed for the generated small Nano ID (shift+alt+u 1)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.86.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "nanoid": "^3.3.7"
+  },
+  "icon": "assets/icon.png"
+}
