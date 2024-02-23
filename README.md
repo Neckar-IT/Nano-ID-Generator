@@ -1,4 +1,9 @@
 # About
+<p align="center">
+  <a href="https://github.com/ai/nanoid">
+    <img src="./assets/icon.png">
+  </a>
+</p>
 
 This is a vscode extension to easily insert a [nano id](https://github.com/ai/nanoid) at the current point of focus. It provides 3 commands + shortcuts for different sizes.\
 Default sizes:
@@ -10,6 +15,9 @@ Default sizes:
 The Default seed only includes numbers as well as lowercase and uppercase letters.\
 The first character will always be a letter.\
 This is to make it easier to use the ids as object properties, since strings with hyphens and strings with a starting number will require special attention.
+
+[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?color=blue&style=flat-square)](http://opensource.org/licenses/MIT)
+
 
 # Use this extension
 ## In Editor
