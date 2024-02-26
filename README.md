@@ -8,9 +8,9 @@
 This is a vscode extension to easily insert a [nano id](https://github.com/ai/nanoid) at the current point of focus. It provides 3 commands + shortcuts for different sizes.\
 Default sizes:
 
-- large (q): 36,
-- medium (w): 21,
-- small (e): 10.
+- large: 36,
+- medium: 21,
+- small: 10.
 
 The Default seed only includes numbers as well as lowercase and uppercase letters.\
 The first character will always be a letter.\
