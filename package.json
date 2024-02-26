@@ -21,6 +21,7 @@
   "categories": [
     "Other"
   ],
+  "publisher": "NeckarIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Neckar-IT/Nano-ID-Generator.git"

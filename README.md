@@ -1,7 +1,7 @@
 # About
 <p align="center">
   <a href="https://github.com/ai/nanoid">
-    <img src="./assets/icon.png">
+    <img src="https://github.com/Neckar-IT/Nano-ID-Generator/raw/main/assets/icon.png">
   </a>
 </p>
 
