@@ -2,7 +2,7 @@
   "name": "nano-id-gen",
   "displayName": "Nano-ID-Generator",
   "description": "Generate various Nano IDs via keyboard shortcuts.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Neckar IT",
   "engines": {
     "vscode": "^1.86.0"

@@ -12,7 +12,7 @@ Default sizes:
 - medium: 21,
 - small: 10.
 
-The Default seed only includes numbers as well as lowercase and uppercase letters.\
+The default seed only includes numbers as well as lowercase and uppercase letters.\
 The first character will always be a letter.\
 This is to make it easier to use the ids as object properties, since strings with hyphens and strings with a starting number will require special attention.
 
